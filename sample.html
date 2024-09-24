@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Scrolling Video Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        .slide {
+            display: inline-block;
+            position: relative;
+            width: 200px; /* Adjust thumbnail width */
+            margin: 0 10px;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Pause animation on hover */
+        .slider-container:hover .slider {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slider" id="slider">
+        <div class="slide">
+            <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1" target="_blank">
+                <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_1/hqdefault.jpg" alt="Video 1">
+                <div class="caption">Video Title 1</div>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2" target="_blank">
+                <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_2/hqdefault.jpg" alt="Video 2">
+                <div class="caption">Video Title 2</div>
+            </a>
+        </div>
+        <div class="slide">
+            <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3" target="_blank">
+                <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_3/hqdefault.jpg" alt="Video 3">
+                <div class="caption">Video Title 3</div>
+            </a>
+        </div>
+        <!-- You can add more slides here -->
+    </div>
+</div>
+
+<script>
+    const slider = document.getElementById('slider');
+    const slideCount = slider.children.length;
+    const totalWidth = slideCount * 220; // 200px slide width + 10px margin (adjust if necessary)
+
+    // Duplicate the slides dynamically for seamless looping
+    slider.innerHTML += slider.innerHTML;
+
+    // Set the width of the slider to accommodate the duplicated slides
+    slider.style.width = `${totalWidth * 2}px`;
+</script>
+
+</body>
+</html>
