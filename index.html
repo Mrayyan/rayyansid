@@ -36,31 +36,25 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
+   
     <style>
-        .slider-container {
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+    
+        .grid-item {
+            position: relative;
             width: 100%;
-            overflow: hidden;
-            position: relative;
         }
-
-        .slider {
-            display: flex;
-            white-space: nowrap;
-            animation: scroll 600s linear infinite;
-        }
-
-        .slide {
-            display: inline-block;
-            position: relative;
-            width: 400px; /* Adjust thumbnail width */
-            margin: 0 10px;
-        }
-
-        .slide img {
+    
+        .grid-item img {
             width: 100%;
             border-radius: 10px;
         }
-
+    
         .caption {
             position: absolute;
             bottom: 5px;
@@ -71,43 +65,6 @@
             padding: 5px;
             border-radius: 10px;
         }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        /* Pause animation on hover */
-        .slider-container:hover .slider {
-            animation-play-state: paused;
-        }
-
-        .about-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.text-content {
-    flex: 1;
-}
-
-.image-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.image-content img {
-    width: 300px; /* Adjust size as needed */
-    height: auto;
-    object-fit: cover;
-}
     </style>
 </head>
 
@@ -308,81 +265,80 @@
             </div>
 
 
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=_BCezKz9f_I" target="_blank">
+                        <img src="https://img.youtube.com/vi/IhFosmmq6h0/hqdefault.jpg" alt="Rayyan Siddiqui on Microsoft's Official YouTube Channel">
+                        <div class="caption">Microsoft Official YT</div>
+                    </a>
+                </div>
+                
            
-<div class="slider-container">
-    <div class="slider" id="slider">
-      
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=Zfh69iXjTpo" target="_blank">
-                <img src="https://img.youtube.com/vi/YjPWw4VTIpw/hqdefault.jpg" alt="Rayyan Siddiqui on City21 News">
-                <div class="caption">City21 News</div>
-            </a>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=qfNuUA850Ns" target="_blank">
+                    <img src="https://img.youtube.com/vi/_VzGOea9ykw/hqdefault.jpg" alt="Rayyan Siddiqui Aik Aur Subh Morning Show">
+                    <div class="caption">Aur Morning Show</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=EAxyXWnK9dg" target="_blank">
+                    <img src="https://img.youtube.com/vi/EAxyXWnK9dg/hqdefault.jpg" alt="Video 2">
+                    <div class="caption">BC Tech Award</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=YWr3KKBmIzQ" target="_blank">
+                    <img src="https://img.youtube.com/vi/YWr3KKBmIzQ/hqdefault.jpg" alt="Rayyan Siddiqui CityFM89 Radio Show">
+                    <div class="caption">CityFM89 Radio Show</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=f_57W1uwVpk" target="_blank">
+                    <img src="https://img.youtube.com/vi/f_57W1uwVpk/hqdefault.jpg" alt="Rayyan Siddiqui on BOL News">
+                    <div class="caption">BOL News</div>
+                </a>
+            </div>
+            
+            <div class="grid-item">
+                <a href="https://www.muslimgamechangers.org/2168888/episodes/14031189-muhammad-rayyan-siddiqui-world-s-youngest-ms-software-engineer-vancouver-canada" target="_blank">
+                    <img src="https://img.youtube.com/vi/EATSSZjf7_U/hqdefault.jpg" alt="Rayyan Siddiqui Muslim Game Changers Podcast">
+                    <div class="caption">Muslim Game Changers Podcast</div>
+                </a>
+            </div>
+          
+            <div class="grid-item">
+                <a href="https://x.com/GovtofPakistan/status/935410139909238784" target="_blank">
+                    <img src="https://pbs.twimg.com/media/DPs761aWkAAk7dA?format=jpg&name=large" alt="Rayyan Siddiqui recognized by Government of Pakistan">
+                    <div class="caption">Gov of Pakistan</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=PvTS1CBeM_s" target="_blank">
+                    <img src="https://img.youtube.com/vi/PvTS1CBeM_s/hqdefault.jpg" alt="Rayyan Siddiqui on Express News">
+                    <div class="caption">Express News</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=nR7OnrLMrB0" target="_blank">
+                    <img src="https://img.youtube.com/vi/nR7OnrLMrB0/hqdefault.jpg" alt="Rayyan Siddiqui on ARY News">
+                    <div class="caption">ARY News</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=Zfh69iXjTpo" target="_blank">
+                    <img src="https://img.youtube.com/vi/YjPWw4VTIpw/hqdefault.jpg" alt="Rayyan Siddiqui on City21 News">
+                    <div class="caption">City21 News</div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.youtube.com/watch?v=sPIFPChRxH8" target="_blank">
+                    <img src="https://img.youtube.com/vi/sPIFPChRxH8/hqdefault.jpg" alt="Rayyan Siddiqui on Samaa News">
+                    <div class="caption">Samaa News</div>
+                </a>
+            </div>
+           
+          
         </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=qfNuUA850Ns" target="_blank">
-                <img src="https://img.youtube.com/vi/_VzGOea9ykw/hqdefault.jpg" alt="Rayyan Siddiqui Aik Aur Subh Morning Show">
-                <div class="caption">Aur Morning Show</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=f_57W1uwVpk" target="_blank">
-                <img src="https://img.youtube.com/vi/f_57W1uwVpk/hqdefault.jpg" alt="Rayyan Siddiqui on BOL News">
-                <div class="caption">BOL News</div>
-            </a>
-        </div>  
-        
-        <div class="slide">
-            <a href="https://x.com/GovtofPakistan/status/935410139909238784" target="_blank">
-                <img src="https://pbs.twimg.com/media/DPs761aWkAAk7dA?format=jpg&name=large" alt="Rayyan Siddiqui recognized by Government of Pakistan">
-                <div class="caption">Gov of Pakistan</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=PvTS1CBeM_s" target="_blank">
-                <img src="https://img.youtube.com/vi/PvTS1CBeM_s/hqdefault.jpg" alt="Rayyan Siddiqui on Express News">
-                <div class="caption">Express News</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=nR7OnrLMrB0" target="_blank">
-                <img src="https://img.youtube.com/vi/nR7OnrLMrB0/hqdefault.jpg" alt="Rayyan Siddiqui on ARY News">
-                <div class="caption">ARY News</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=sPIFPChRxH8" target="_blank">
-                <img src="https://img.youtube.com/vi/sPIFPChRxH8/hqdefault.jpg" alt="Rayyan Siddiqui on Samaa News">
-                <div class="caption">Samaa News</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.muslimgamechangers.org/2168888/episodes/14031189-muhammad-rayyan-siddiqui-world-s-youngest-ms-software-engineer-vancouver-canada" target="_blank">
-                <img src="https://img.youtube.com/vi/EATSSZjf7_U/hqdefault.jpg" alt="Rayyan Siddiqui Muslim Game Changers Podcast">
-                <div class="caption">Muslim Game Changers Podcast</div>
-            </a>
-        </div>
-        
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=_BCezKz9f_I" target="_blank">
-                <img src="https://img.youtube.com/vi/IhFosmmq6h0/hqdefault.jpg" alt="Rayyan Siddiqui on Microsoft's Official YouTube Channel">
-                <div class="caption">Microsoft Official YT</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=YWr3KKBmIzQ" target="_blank">
-                <img src="https://img.youtube.com/vi/YWr3KKBmIzQ/hqdefault.jpg" alt="Rayyan Siddiqui CityFM89 Radio Show">
-                <div class="caption">CityFM89 Radio Show</div>
-            </a>
-        </div>
-        <div class="slide">
-            <a href="https://www.youtube.com/watch?v=EAxyXWnK9dg" target="_blank">
-                <img src="https://img.youtube.com/vi/EAxyXWnK9dg/hqdefault.jpg" alt="Video 2">
-                <div class="caption">BC Tech Award</div>
-            </a>
-        </div>
-        <!-- You can add more slides here -->
-    </div>
-</div>
 
 <script>
     const slider = document.getElementById('slider');
