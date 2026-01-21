@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received | 30-Day AI Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+            transform: translateY(-2px);
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .7;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Main Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-2xl mx-auto text-center">
+            <!-- Success Icon -->
+            <div class="mb-8 flex justify-center">
+                <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-6xl font-black mb-6">
+                Application <span class="gradient-text">Received</span>
+            </h1>
+
+            <!-- Body Text -->
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 md:p-10 mb-8">
+                <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                    Your application is under review. However, we have over <span class="text-white font-semibold">500 applicants</span> for limited spots.
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    You can <span class="gradient-text font-semibold">skip the line</span> and guarantee your spot by placing a fully refundable <span class="text-white font-semibold">$20 Priority Deposit</span>.
+                </p>
+            </div>
+
+            <!-- Benefits -->
+            <div class="mb-10 space-y-4">
+                <div class="flex items-center justify-center text-left">
+                    <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="text-gray-300">Guaranteed spot in the challenge</span>
+                </div>
+                <div class="flex items-center justify-center text-left">
+                    <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="text-gray-300">Skip the 500+ applicant waitlist</span>
+                </div>
+                <div class="flex items-center justify-center text-left">
+                    <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <span class="text-gray-300">100% refundable if you change your mind</span>
+                </div>
+            </div>
+
+            <!-- Primary CTA -->
+            <a href="[INSERT YOUR STRIPE LINK HERE]" 
+               class="glow-button inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg md:text-xl font-bold px-12 py-5 rounded-full hover:from-purple-700 hover:to-blue-700 mb-6">
+                Secure My Spot ($20)
+            </a>
+
+            <!-- Secondary Link -->
+            <div>
+                <a href="success.html" 
+                   class="text-gray-500 hover:text-gray-400 text-sm underline transition-colors">
+                    No thanks, I'll stay on the general waitlist
+                </a>
+            </div>
+
+            <!-- Trust Badge -->
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex items-center justify-center text-gray-500 text-sm">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Secure payment powered by Stripe • Full refund guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-4 border-t border-gray-800 text-center text-gray-500">
+        <p>&copy; 2026 Muhammad Rayyan Siddiqui. All rights reserved.</p>
+    </footer>
+</body>
+</html>
